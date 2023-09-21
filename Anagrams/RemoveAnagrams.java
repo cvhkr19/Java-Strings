@@ -14,7 +14,7 @@ public class RemoveAnagrams {
             hash[b.charAt(i) - 'a']--;
         }
         for(int i = 0;i < 26;i++){
-            if(hash[i] > 0){
+            if(hash[i] != 0){ // > 0, can fail.
                 return false;
             }
         }
